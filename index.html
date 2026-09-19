@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#090612" />
+  <title>Uma Pequena Viagem — Ana Luiza</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="noise"></div>
+  <div id="vignette"></div>
+  <canvas id="space"></canvas>
+
+  <main id="app">
+    <section class="screen active" id="intro">
+      <div class="sun-orbit" aria-hidden="true">
+        <div class="sun-core"></div>
+        <span class="orbit o1"></span><span class="orbit o2"></span><span class="orbit o3"></span>
+        <i class="orbit-dot d1"></i><i class="orbit-dot d2"></i><i class="orbit-dot d3"></i>
+      </div>
+      <div class="eyebrow">UMA PEQUENA VIAGEM PELO UNIVERSO</div>
+      <h1>Ana Luiza<br><em>uma pequena viagem.</em></h1>
+      <p class="lead">A gente se conheceu há pouco tempo.<br>Então pensei em fazer uma coisa diferente:<br>guardar alguns momentos seus em um pequeno universo.</p>
+      <button class="primary" data-action="enter"><span>ENTRAR NA HISTÓRIA</span><b>↗</b></button>
+      <div class="scroll-hint">toque para começar · uma pequena surpresa</div>
+    </section>
+
+    <section class="screen" id="fall">
+      <canvas id="warp"></canvas>
+      <div class="fall-copy"><small>FECHA OS OLHOS POR UM SEGUNDO</small><strong>e deixa a gente<br>cair nas estrelas.</strong></div>
+    </section>
+
+    <section class="screen" id="galaxy">
+      <canvas id="galaxyCanvas"></canvas>
+      <header class="topbar"><span>ANA LUIZA</span><span>✦</span></header>
+      <div class="galaxy-copy">
+        <span class="chapter">CAPÍTULO 01 · O COMEÇO</span>
+        <h2>Entre bilhões de estrelas,<br><em>uma delas acabou trazendo você até aqui.</em></h2>
+        <p>Não é uma declaração, nem uma tentativa de definir alguma coisa. É só uma forma diferente de registrar esse começo.</p>
+        <button class="ghost" data-action="story">CONTINUAR A HISTÓRIA <span>↓</span></button>
+      </div>
+      <div class="heart-label">✦ toque e continue ✦</div>
+    </section>
+
+    <section class="screen story-screen" id="story">
+      <div class="story-stars"></div>
+      <div class="story-progress"><span></span></div>
+      <article class="story-card photo-story" id="storyCard">
+        <div class="story-photo-wrap"><img id="storyPhoto" src="fotos/foto1.jpg" alt="Ana Luiza" /></div>
+        <div class="story-icon" id="storyIcon">✦</div>
+        <span class="chapter" id="storyChapter">CAPÍTULO 02 · 01</span>
+        <h2 id="storyTitle">O começo</h2>
+        <p id="storyText">A gente se conheceu há pouco tempo. E mesmo assim, já dá para perceber que você tem um jeito próprio de ocupar os lugares por onde passa.</p>
+        <div class="story-foot"><span id="storyCount">1 / 5</span><button class="round-btn" data-action="nextStory">→</button></div>
+      </article>
+      <div class="floating-word w1">sorriso</div><div class="floating-word w2">lua</div><div class="floating-word w3">calma</div><div class="floating-word w4">você</div>
+    </section>
+
+    <section class="screen declaration-screen" id="constellation">
+      <div class="declaration-stars" aria-hidden="true"></div>
+      <div class="declaration-orbit o-a"></div><div class="declaration-orbit o-b"></div>
+      <div class="declaration-content">
+        <span class="chapter">UMA PEQUENA PAUSA</span>
+        <div class="tiny-heart">✦</div>
+        <h2>Agora que você chegou até aqui,<br><em>fica mais um pouco.</em></h2>
+        <p>São só cinco fotos, algumas palavras e uma experiência feita para alguém que eu conheci recentemente.</p>
+        <div class="short-declaration">“Tem encontros que ainda não precisam de nome.<br>Às vezes, basta deixar a conversa continuar.”</div>
+        <button class="primary" data-action="finale"><span>CONTINUAR</span><b>✦</b></button>
+      </div>
+    </section>
+
+    <section class="screen burst-screen" id="finale">
+      <div class="finale-card">
+        <span class="chapter">ÚLTIMO MOMENTO</span>
+        <div class="finale-symbol">✦</div>
+        <h2>Antes de terminar...<br><em>fica só mais um segundo aqui.</em></h2>
+        <p>Eu queria deixar uma última tela para fechar essa pequena viagem. Sem grandes conclusões. Só uma lembrança boa desse começo.</p>
+        <button class="primary finale-trigger" data-action="ending"><span>ENCERRAR A VIAGEM</span><b>✦</b></button>
+        <div class="question-note">toque quando estiver pronta.</div>
+      </div>
+    </section>
+
+    <section class="screen ending-screen" id="ending">
+      <canvas id="endingCanvas" aria-hidden="true"></canvas>
+      <div class="ending-halo"></div>
+      <span class="chapter">E AGORA, SEM PRESSA</span>
+      <h2>Foi só uma pequena viagem<br><em>até você.</em></h2>
+      <div class="final-letter">
+        <p class="main-declaration">Ana Luiza,</p>
+        <p>eu não sei ainda o que o tempo vai fazer com as histórias que começam assim — de repente, sem planejamento e sem precisar de grandes explicações.</p>
+        <p>Por enquanto, eu só achei legal guardar esse pedacinho: cinco fotos, algumas palavras e um universo inteiro montado para marcar o começo de uma nova conversa.</p>
+        <p class="faith">O resto a gente deixa acontecer naturalmente.</p>
+        <p class="love">Sem pressa. Sem rótulo. Só continuando a conhecer.</p>
+      </div>
+      <p class="signature">Feito especialmente para<br><strong>ANA LUIZA</strong></p>
+      <button class="replay" data-action="replay">↻ viver tudo de novo</button>
+    </section>
+
+  </main>
+
+  <div class="tap-heart" id="tapHeart">♥</div>
+  <script src="./app.js"></script>
+</body>
+</html>
